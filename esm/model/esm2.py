@@ -4,11 +4,17 @@
 # LICENSE file in the root directory of this source tree.
 
 from typing import Union
+
 import torch
 import torch.nn as nn
 
-import esm
-from esm.modules import ContactPredictionHead, ESM1bLayerNorm, RobertaLMHead, TransformerLayer
+from src.dependencies.esm import esm
+from src.dependencies.esm.esm.modules import (
+    ContactPredictionHead,
+    ESM1bLayerNorm,
+    RobertaLMHead,
+    TransformerLayer,
+)
 
 
 class ESM2(nn.Module):
